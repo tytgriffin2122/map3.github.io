@@ -1,0 +1,47 @@
+
+<html>
+    <body>
+        <script>
+             window.oncontextmenu=function(){return false;} 
+    //禁止任何键盘敲击事件（防止F12和shift+ctrl+i调起开发者工具） 
+    window.onkeydown = window.onkeyup = window.onkeypress = function () { 
+        window.event.returnValue = false; 
+        return false; 
+    } 
+    //如果用户在工具栏调起开发者工具，那么判断浏览器的可视高度和可视宽度是否有改变，如有改变则关闭本页面 
+    var h = window.innerHeight,w=window.innerWidth; 
+    window.onresize = function () { 
+        if (h!= window.innerHeight||w!=window.innerWidth){ 
+            window.close(); 
+            window.location = "about:blank"; 
+        } 
+    }
+var password = 447136450;
+var input;
+var entry_count = 0;
+var entry_limit = 1;
+var out_of_limit = false;
+
+while(password!=input && !out_of_limit){
+    entry_count++;
+    if(entry_count<=entry_limit){
+         input=prompt("這是陳老師的卷冊，請輸入     卷冊的密碼：");
+}
+    else {
+        out_of_limit=true;
+    }
+}
+
+if(out_of_limit){
+    alert("密碼錯誤");
+}
+else{
+    alert("我是陳老師，你打開了我的卷冊，想必也是為了魔盒的密碼而來吧！不急，解開密碼的4個數字吧！");
+    alert("https://tytgriffin2122.github.io/map3.github.io/hintsrm3/hintsss.html");
+    
+    
+}
+</script>
+</body>
+
+</html>
